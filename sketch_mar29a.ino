@@ -2,7 +2,9 @@
 #include <ESP8266WiFi.h>
 #include <Servo.h>
 
-#define WIFI_SSID "CalVisitor"
+#define WIFI_SSID "Pixel_8171"
+#define WIFI_PASSWORD "88c2ca9d056a"
+
 #define FIREBASE_HOST "conwings-eb540.firebaseio.com"
 #define FIREBASE_AUTH "RfgeplEch5BUbXMkQOIbZZJpTcAN6kIQ1wXaQzL9"
 
@@ -42,7 +44,7 @@ void closeWings() {
 void setup() {
   Serial.begin(115200);
 
-  WiFi.begin(WIFI_SSID);
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   Serial.print("Connecting to Wi-Fi");
 
   while (WiFi.status() != WL_CONNECTED) {
